@@ -228,6 +228,12 @@
           "caption": ""
         }
       ]
+    },
+    {
+      "name": "Notice",
+      "link": "",
+      "text": "[빠른 접수 양식]\n1. 의뢰하시는 분의 성함(닉네임). 방송 플랫폼 링크(스트리머 분 한정)\n2. 일러스트의 용도. 일반, 방송용, 상업용 중에 기재해 주세요. 스트리머 캐릭터 신청은 팬 분의 신청이어도 방송용 단가로 받습니다.\n3. 원하시는 그림의 내용\n4. 기타 요청 사항 \n---\n답신으로 총 견적 안내와 함께 확인 즉시 입금처, 완성본 전달 날짜 안내해 드리도록 하겠습니다. 감사합니다!\n---\n[작업 과정]\n입금 확인 - 러프 피드백 - 최종 완성본 전달\n---\n완성본은 입금일 기준 다음날부터 7일 이내로 전달합니다. \n여러장을 신청하신 경우에도 가급적 7일 이내에 전달하려고 하나, 작업물의 양이 많으면 완성본 전달 날짜를 사전에 조정 요청드릴 수 있습니다.\n피드백 횟수가 너무 많아질 경우 추가금 결제를 요청드릴 수 있습니다.",
+      "images": []
     }
   ]
 }</script>
@@ -350,7 +356,7 @@
 
   function renderGrid(c){
     var imgs = c.images || [];
-    if(imgs.length === 0) return '<div class="grid"><div class="empty">아직 그림이 없어요.</div></div>';
+    if(imgs.length === 0) return '<div class="grid"><div class="empty"></div></div>';
     var pages = Math.ceil(imgs.length / PER_PAGE);
     var pg = Math.min(pageOf(state.active), pages-1);
     if(pg < 0) pg = 0;
@@ -522,6 +528,7 @@
   render();
 })();
 </script>
+
 
 
 
